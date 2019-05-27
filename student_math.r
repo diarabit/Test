@@ -15,13 +15,18 @@ library(ggplot2)
 library(ROCR)
 library(psych)
 
-set.seed(1111) # 0.28, 0.54
-set.seed(4856) # 0.31, 0.33
-set.seed(292100) # 0.30, 0.43
-set.seed(9436) # 0.30, 0.37
-set.seed(3075) # 0.30, 0.32
-set.seed(0075) # 0.29, 0.46
-set.seed(9367) # 0.29, 0.47
+boxplot(d1)
+
+d1 <- d1[d1$absences < 15, ]
+
+
+set.seed(1111) # 0.34, 0.30
+set.seed(4856) # 0.35, 0.36
+set.seed(292100) # 0.29, 0.55
+set.seed(9436) # 0.32, 0.52
+set.seed(3075) # 0.33, 0.45
+set.seed(0075) # 0.33, 0.38
+set.seed(9367) # 0.34, 0.35
 index <- sample(nrow(d1), nrow(d1)*0.9)
 
 d1$age <- as.factor(d1$age)
@@ -45,6 +50,7 @@ train$G2 <- NULL
 train$G3 <- NULL
 test$G2 <- NULL
 test$G3 <- NULL
+
 
 # 선형회귀
 fit.full <- lm(G1 ~ ., train)
@@ -74,3 +80,14 @@ d <- cbind(id=1:40, actuals_preds.for)
 ggplot(d, aes(id)) + 
   geom_line(aes(y = prediction, colour = 'prediction')) + 
   geom_line(aes(y = actuals, colour = 'actuals'))
+
+
+library(FNN)
+train2 <- train[, -31]
+test2 <- test[, -31]
+
+train2_target <- train[, 31]
+test2_target <- test[, 31]
+
+pr <- knn(train2, test2, cl = train2_target, k=1)
+summary(pr)
