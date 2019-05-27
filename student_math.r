@@ -15,6 +15,13 @@ library(ggplot2)
 library(ROCR)
 library(psych)
 
+set.seed(1111) # 0.28, 0.54
+set.seed(4856) # 0.31, 0.33
+set.seed(292100) # 0.30, 0.43
+set.seed(9436) # 0.30, 0.37
+set.seed(3075) # 0.30, 0.32
+set.seed(0075) # 0.29, 0.46
+set.seed(9367) # 0.29, 0.47
 index <- sample(nrow(d1), nrow(d1)*0.9)
 
 d1$age <- as.factor(d1$age)
