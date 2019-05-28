@@ -1,2 +1,5 @@
 데이터 종류에 따른 분석 기법 
  - https://rpubs.com/jmhome/datatype_analysis
+
+r 테스트 진행
+ - https://campus.datacamp.com/courses/statistical-modeling-in-r-part-1/assessing-prediction-performance?ex=5
