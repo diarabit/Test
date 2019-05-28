@@ -3,3 +3,6 @@
 
 r 테스트 진행
  - https://campus.datacamp.com/courses/statistical-modeling-in-r-part-1/assessing-prediction-performance?ex=5
+
+r에서 step 기능 사용하기 (step 설명 및 그래프 보는법)
+ - https://lovetoken.github.io/r/2016/01/25/Step_function_modeling.html
