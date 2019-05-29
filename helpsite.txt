@@ -9,3 +9,6 @@ r에서 step 기능 사용하기 (step 설명 및 그래프 보는법)
 
 회귀모델의 종류
  - https://danbi-ncsoft.github.io/study/2018/05/04/study-regression_model_summary.html
+
+딥러닝 개념 학습
+ - https://hunkim.github.io/ml/
