@@ -12,3 +12,8 @@ r에서 step 기능 사용하기 (step 설명 및 그래프 보는법)
 
 딥러닝 개념 학습
  - https://hunkim.github.io/ml/
+
+의사결정 나무
+ - https://ratsgo.github.io/machine%20learning/2017/03/26/tree/
+ 
+ 
